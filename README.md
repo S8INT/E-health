@@ -99,7 +99,7 @@ Interested developers are welcome to contribute in any of the following areas:
     Expand Image Format Support: Add support for more image formats and modalities (e.g., ultrasound).
 -----------------------------------------------------------------------------------------------------------------------------------------
 License
-This project is licensed under the MIT License. Please feel free to use, modify, and distribute the code according to the license terms.
+ Please feel free to use, modify, and distribute the code according to the license terms.
 -----------------------------------------------------------------------------------------------------------------------------------------
 CONTACT:
 Feel free to reach out if you have questions, suggestions, or feedback!
