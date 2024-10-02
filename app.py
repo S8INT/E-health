@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
 import os
-from preprocessing import preprocess_image
+from preprocessing import preprocess_image, enhance_image
 from model import analyze_image
 from utils import allowed_file
 
@@ -65,5 +65,13 @@ def run_inference():
     
     return jsonify({"message": "Inference completed", "result": result}), 200
 
+
+# Route to enhance the image                                                                                                                                            
+@app.route('/process/enhance/<filename>', methods=['POST'])                                                                                                             
+def enhances_image(filename):                                                                                                                                
+    filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)                                                                                                      
+    if not os.path.exists(filepath):                                                                                                                                    
+        return jsonify({"error": "File not found"}), 404
+               
 if __name__ == '__main__':
     app.run(debug=True)
